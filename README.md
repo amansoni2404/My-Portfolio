@@ -1,75 +1,96 @@
 
 
-# Welcome to your Lovable project
+## Aman Soni – Portfolio
 
-## Project info
+This repository contains the source code for my personal developer portfolio – a single-page application showcasing my background, skills, projects, and contact information.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The site is built and maintained by me to feel like a hand-crafted, “coded” portfolio rather than a generated template.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+### Tech Stack
 
-**Use Lovable**
+- **React 18** + **TypeScript**
+- **Vite** (bundler/dev server)
+- **Tailwind CSS** for styling
+- **shadcn/ui** for accessible, composable UI components
+- **lucide-react** for icons
+- **EmailJS** for contact form email delivery
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+### Getting Started (Local Development)
 
-**Use your preferred IDE**
+Prerequisites:
+- **Node.js** (LTS recommended) and **npm**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Clone and run:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```bash
+git clone https://github.com/amansoni2404/portfolio.git
+cd portfolio/my-awesome-portfolio-main/my-awesome-portfolio-main
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Then open the URL printed in the terminal (usually `http://localhost:5173`).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+### Environment Variables (EmailJS)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The contact form uses **EmailJS** to send messages directly to my inbox without a custom backend.
 
-## What technologies are used for this project?
+Create a `.env` file in `my-awesome-portfolio-main/my-awesome-portfolio-main` with:
 
-This project is built with:
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id_here
+VITE_EMAILJS_TEMPLATE_ID=your_template_id_here
+VITE_EMAILJS_PUBLIC_KEY=your_public_key_here
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+These values come from your EmailJS dashboard:
+- **Service ID** – from *Email Services*
+- **Template ID** – from *Email Templates*
+- **Public Key** – from *Account → API Keys*
 
-## How can I deploy this project?
+The template is expected to support the following variables:
+- `from_name`
+- `from_email`
+- `subject`
+- `message`
+- `to_email`
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+After editing `.env`, restart the dev server.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+### Build & Production
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+To create a production build:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```bash
+npm run build
+```
+
+The optimized static files will be output to the `dist` directory.  
+You can deploy this folder to any static hosting provider (Vercel, Netlify, GitHub Pages, Cloudflare Pages, etc.).
+
+---
+
+### Project Structure (high level)
+
+- `src/components/Navbar.tsx` – top navigation bar and signature-style name
+- `src/components/Hero.tsx` – hero section with portrait and intro
+- `src/components/Projects.tsx` – featured projects showcase
+- `src/components/Contact.tsx` – contact details + EmailJS-powered form
+- `src/components/Footer.tsx` – footer and social links
+- `src/index.css` – global styles and Tailwind layers
+- `vite.config.ts` – Vite configuration and path aliases
+
+---
+
+### License
+
+This is my personal portfolio. You’re welcome to look around and take inspiration, but please do not copy it wholesale and present it as your own work.
