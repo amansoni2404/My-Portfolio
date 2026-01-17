@@ -18,12 +18,18 @@ const Contact = () => {
     setSubmitStatus({ type: null, message: '' });
 
     try {
-      // EmailJS configuration
-      // You'll need to set these up at https://www.emailjs.com/
-      // Get your keys from: Dashboard > Account > API Keys
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID';
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        setSubmitStatus({
+          type: 'error',
+          message: 'Contact form is not configured for this environment. Please email me directly at amansoni@umich.edu',
+        });
+        setIsSubmitting(false);
+        return;
+      }
 
       // Send email via EmailJS
       await emailjs.send(
