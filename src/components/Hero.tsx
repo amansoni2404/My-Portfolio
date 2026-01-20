@@ -228,7 +228,11 @@ const Hero = () => {
               <div className="text-muted-foreground text-lg max-w-2xl leading-relaxed space-y-2">
                 <p>MS CSE @UMich.</p>
                 <p>Passionate about building intelligent systems that solve real world problems through cutting edge AI, scalable cloud infrastructure, backend systems, and innovative software solutions.</p>
-                <p>Seeking Summer 2026 Internships in SWE, Data, or AI/ML Engineering.</p>
+                <p>
+                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-accent-orange/20 text-accent-orange border border-accent-orange/30 inline-block">
+                    Seeking Summer 2026 Internships in SWE, Data, or AI/ML Engineering
+                  </span>
+                </p>
               </div>
             </div>
 
