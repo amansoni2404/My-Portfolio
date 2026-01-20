@@ -226,7 +226,17 @@ const Hero = () => {
               </h2>
 
               <div className="text-muted-foreground text-lg max-w-2xl leading-relaxed space-y-2">
-                <p>MS CSE @UMich.</p>
+                <p className="flex items-center gap-2">
+                  <img 
+                    src="/umich-logo.png" 
+                    alt="University of Michigan Logo"
+                    className="w-5 h-5 object-contain inline-block"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                  <span>MS CSE @UMich.</span>
+                </p>
                 <p>Passionate about building intelligent systems that solve real world problems through cutting edge AI, scalable cloud infrastructure, backend systems, and innovative software solutions.</p>
                 <p>
                   <span className="text-xs font-semibold px-3 py-1 rounded-full bg-accent-orange/20 text-accent-orange border border-accent-orange/30 inline-block">
