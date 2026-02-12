@@ -1,4 +1,4 @@
-import { Brain, Clock, Target, Scissors, Leaf } from 'lucide-react';
+import { Brain, Clock, Target, Scissors, Leaf, Github } from 'lucide-react';
 
 const awarenessLenses = [
   {
@@ -42,16 +42,28 @@ const Hackathon = () => {
           </div>
 
           <div className="glass-card p-6 md:p-8 mb-8">
-            <div className="flex items-start gap-3 mb-4">
-              <Brain className="w-6 h-6 text-accent-orange mt-1" />
-              <div>
-                <h3 className="font-display text-2xl md:text-3xl font-bold mb-2">
-                  BudgetBruh
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  Built in 24 hours at Carnegie Mellon University with 300+ teams.
-                </p>
+            <div className="flex items-start justify-between gap-4 mb-4">
+              <div className="flex items-start gap-3">
+                <Brain className="w-6 h-6 text-accent-orange mt-1" />
+                <div>
+                  <h3 className="font-display text-2xl md:text-3xl font-bold mb-2">
+                    BudgetBruh
+                  </h3>
+                  <p className="text-muted-foreground text-sm">
+                    Built in 24 hours at Carnegie Mellon University with 300+ teams.
+                  </p>
+                </div>
               </div>
+
+              <a
+                href="https://github.com/amansoni2404/tartanhacks_error_404"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary hover:bg-accent transition-colors text-sm font-medium"
+              >
+                <Github className="w-4 h-4" />
+                <span>View Hackathon Repo</span>
+              </a>
             </div>
 
             <p className="text-muted-foreground leading-relaxed mb-4">
