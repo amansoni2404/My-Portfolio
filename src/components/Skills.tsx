@@ -7,6 +7,7 @@ const techLogos: Record<string, string> = {
   'C++': '/tech-logos/cpp.svg',
   'C': '/tech-logos/c.svg',
   'SQL': '/tech-logos/sql.svg',
+  'Java': '/tech-logos/java.svg',
   // Frameworks
   'React': '/tech-logos/react.svg',
   'Node.js': '/tech-logos/nodejs.svg',
@@ -20,6 +21,12 @@ const techLogos: Record<string, string> = {
   'Scikit-learn': '/tech-logos/scikitlearn.svg',
   'Keras': '/tech-logos/keras.svg',
   'OpenCV': '/tech-logos/opencv.svg',
+  'Spring Boot': '/tech-logos/springboot.svg',
+  'Angular': '/tech-logos/angular.svg',
+  // AI & LLM Engineering
+  'LangChain': '/tech-logos/langchain.svg',
+  'LangGraph': '/tech-logos/langgraph.svg',
+  'RAG': '/tech-logos/rag.svg',
   // Cloud & Databases
   'AWS DynamoDB': '/tech-logos/dynamodb.svg',
   'AWS RDS': '/tech-logos/rds.svg',
@@ -44,6 +51,12 @@ const techLogos: Record<string, string> = {
   'Postman': '/tech-logos/postman.svg',
   'Tableau': '/tech-logos/tableau.svg',
   'Power BI': '/tech-logos/powerbi.svg',
+  'Bitbucket': '/tech-logos/bitbucket.svg',
+  'Confluence': '/tech-logos/confluence.svg',
+  'SonarQube': '/tech-logos/sonarqube.svg',
+  'GitHub Copilot': '/tech-logos/github-copilot.svg',
+  'Claude Code': '/tech-logos/claude.svg',
+  'Cursor': '/tech-logos/cursor.svg',
   // Domains
   'Web Development': '/tech-logos/web-development.svg',
   'Machine Learning': '/tech-logos/machine-learning-model.svg',
@@ -54,11 +67,15 @@ const techLogos: Record<string, string> = {
 const skillCategories = [
   {
     title: 'Languages',
-    skills: ['Python', 'SQL', 'C++', 'C', 'JavaScript', 'TypeScript'],
+    skills: ['Python', 'SQL', 'C++', 'C', 'Java', 'JavaScript', 'TypeScript'],
   },
   {
     title: 'Frameworks',
-    skills: ['Flask', 'Falcon', 'Django', 'FastAPI', 'Node.js', 'React', 'PyTorch', 'Scikit-learn', 'Keras', 'OpenCV', 'Pandas', 'NumPy'],
+    skills: ['Flask', 'Falcon', 'Django', 'FastAPI', 'Spring Boot', 'Node.js', 'React', 'Angular', 'PyTorch', 'Scikit-learn', 'Keras', 'OpenCV', 'Pandas', 'NumPy'],
+  },
+  {
+    title: 'AI & LLM Engineering',
+    skills: ['LangChain', 'LangGraph', 'RAG', 'Hugging Face', 'Weights & Biases'],
   },
   {
     title: 'Cloud & Databases',
@@ -66,7 +83,7 @@ const skillCategories = [
   },
   {
     title: 'Platforms & Tools',
-    skills: ['Linux', 'Docker', 'Git', 'JIRA', 'Jenkins', 'Hugging Face', 'Weights & Biases', 'Redis', 'RabbitMQ', 'Supabase', 'VS Code',  'Postman','Tableau', 'Power BI']
+    skills: ['Linux', 'Docker', 'Git', 'Bitbucket', 'JIRA', 'Confluence', 'Jenkins', 'SonarQube', 'Redis', 'RabbitMQ', 'Supabase', 'VS Code', 'Cursor', 'GitHub Copilot', 'Claude Code', 'Postman', 'Tableau', 'Power BI']
   },
   {
     title: 'Domains',

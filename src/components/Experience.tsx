@@ -1,6 +1,27 @@
-import { Calendar, MapPin, Building2 } from 'lucide-react';
+import { Calendar, MapPin, Building2, FileText } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const experiences = [
+  {
+    title: 'Software Engineer Intern',
+    company: 'Delta Dental of Michigan',
+    companyUrl: 'https://www.deltadentalmi.com',
+    logo: '/delta-dental-logo.png',
+    location: 'East Lansing, MI',
+    period: 'May 2026 – Aug 2026',
+    type: 'Internship',
+    points: [
+      'Designed and shipped a dental-claims intelligence platform that pulls scattered patient records into a single reviewable timeline, mapping each treatment to the tooth it was performed on and cutting the time reviewers spend locating a claim by roughly half across 100,000+ records.',
+      'Built the service in FastAPI on PostgreSQL with SQLAlchemy, using Pandas for aggregation and Plotly for the interactive views, and opened up search across procedure codes, service dates, and dental anatomy.',
+      'Folded claims data that previously lived in separate database tables and spreadsheets into one pipeline behind a single review interface, trimming roughly 30% off manual case-review time.',
+      'Prototyped an AI-assisted triage workflow in PyCaret, benchmarking classification models against historical adjudication patterns to surface the cases most likely to need a human look — tightening review consistency by about 20%.',
+      'Picked up Angular and Java on the job to deliver a claims review-determination feature, handed off polished and ready for the full-time team to integrate.',
+    ],
+    document: {
+      file: 'delta-dental-performance-review.pdf',
+      label: 'View Manager Performance Review',
+    },
+  },
   {
     title: 'Software Developer',
     company: 'Aditya Birla Capital Ltd.',
@@ -45,6 +66,10 @@ const experiences = [
 ];
 
 const Experience = () => {
+  const handleDocumentView = (filename: string) => {
+    window.open(`/${filename}`, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section id="experience" className="py-24 md:py-32 bg-card/30">
       <div className="container mx-auto px-6">
@@ -127,6 +152,20 @@ const Experience = () => {
                       </li>
                     ))}
                   </ul>
+
+                  {exp.document && (
+                    <div className="mt-6">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="border-accent-orange/30 text-accent-orange hover:bg-accent-orange/10"
+                        onClick={() => handleDocumentView(exp.document.file)}
+                      >
+                        <FileText className="mr-2 h-4 w-4" />
+                        {exp.document.label}
+                      </Button>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

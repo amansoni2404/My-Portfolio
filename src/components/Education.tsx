@@ -64,13 +64,15 @@ const Education = () => {
                     <p className="text-muted-foreground text-xs">Aug 2025 – Dec 2026</p>
                   </div>
                   <p className="text-sm mt-3">
-                    <span className="font-semibold">GPA:</span> 3.66/4.0
+                    <span className="font-semibold">GPA:</span> 3.74/4.0
                   </p>
                   <div className="mt-3 space-y-1">
                     <p className="text-sm text-muted-foreground">Relevant Coursework:</p>
                     <ul className="text-sm text-muted-foreground list-disc list-inside space-y-1">
                       <li>Advanced Scalable Systems</li>
-                      <li>Algorithms</li>
+                      <li>Advanced Compilers</li>
+                      <li>Advanced Topics in Computer Vision</li>
+                      <li>Machine Learning</li>
                       <li>AI Foundations</li>
                     </ul>
                   </div>

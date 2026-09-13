@@ -1,4 +1,4 @@
-import { Briefcase, Code, Rocket } from 'lucide-react';
+import { Briefcase, Code, GraduationCap } from 'lucide-react';
 
 const About = () => {
   return (
@@ -19,36 +19,21 @@ const About = () => {
             {/* Left Column - Bio */}
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                A passionate Full-Stack Developer pursuing Master of Science in Computer Science 
-                and Engineering at the University of Michigan, Ann Arbor. With nearly 3 years of 
-                industry experience, I specialize in building scalable web applications and 
-                AI-powered solutions.
+                I like the part of engineering where an idea meets real traffic. Across 3+ years of
+                industry experience I've shipped systems people depend on daily — lending platforms
+                processing 700 loans a day, pipelines delivering 60,000+ financial documents a month,
+                and claims tooling that makes 100K+ records searchable in seconds.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                My journey spans from developing loan processing systems handling 700+ daily 
-                transactions to creating machine learning models for music source separation. 
-                I thrive on solving complex problems and delivering impactful solutions.
+                I'm now finishing an MS in Computer Science & Engineering at the University of Michigan,
+                working where scalable systems meet applied AI — most recently a dental-claims
+                intelligence platform at Delta Dental of Michigan, and TriGuard, a semantic caching layer
+                that cuts LLM API costs 14x without serving stale answers.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                When I'm not coding, I'm exploring the latest in AI and cloud technologies, 
-                contributing to open-source projects, and sharing knowledge with the developer community.
+                If you're building something ambitious in backend, distributed systems, or AI
+                infrastructure, I'd love to hear about it.
               </p>
-
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-8">
-                <div className="text-center">
-                  <p className="text-4xl font-display font-bold">3+</p>
-                  <p className="text-muted-foreground text-sm mt-1">Years Experience</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-4xl font-display font-bold">10+</p>
-                  <p className="text-muted-foreground text-sm mt-1">Projects Completed</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-4xl font-display font-bold">1</p>
-                  <p className="text-muted-foreground text-sm mt-1">IEEE Publication</p>
-                </div>
-              </div>
             </div>
 
             {/* Right Column - Highlights */}
@@ -59,9 +44,12 @@ const About = () => {
                     <Code size={24} className="text-accent-orange" />
                   </div>
                   <div>
-                    <h3 className="font-display font-semibold text-lg">Current Focus</h3>
-                    <p className="text-muted-foreground text-sm">Full-Stack Development & Machine Learning</p>
-                    <p className="text-sm mt-2 text-muted-foreground">Building AI-powered applications with modern web technologies</p>
+                    <h3 className="font-display font-semibold text-lg">What I'm Building</h3>
+                    <p className="text-muted-foreground text-sm">Backend Systems & AI Infrastructure</p>
+                    <p className="text-sm mt-2 text-muted-foreground">
+                      Python and FastAPI services, PostgreSQL pipelines, and retrieval systems — currently
+                      deep in semantic caching and making LLM responses trustworthy at scale.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -72,9 +60,12 @@ const About = () => {
                     <Briefcase size={24} className="text-accent-orange" />
                   </div>
                   <div>
-                    <h3 className="font-display font-semibold text-lg">Industry Experience</h3>
-                    <p className="text-muted-foreground text-sm">Ex-Aditya Birla Capital</p>
-                    <p className="text-sm mt-2 text-muted-foreground">Developed enterprise-level financial systems and scalable architectures</p>
+                    <h3 className="font-display font-semibold text-lg">Where I've Worked</h3>
+                    <p className="text-muted-foreground text-sm">Delta Dental of Michigan · Aditya Birla Capital</p>
+                    <p className="text-sm mt-2 text-muted-foreground">
+                      Dental-claims intelligence and AutoML-assisted triage as a 2026 SWE intern, after three
+                      years in Mumbai building lending platforms, REST and GraphQL APIs, and an AWS migration.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -82,12 +73,15 @@ const About = () => {
               <div className="glass-card p-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-secondary rounded-xl">
-                    <Rocket size={24} className="text-accent-orange" />
+                    <GraduationCap size={24} className="text-accent-orange" />
                   </div>
                   <div>
-                    <h3 className="font-display font-semibold text-lg">Passion & Goals</h3>
-                    <p className="text-muted-foreground text-sm">Continuous Learning & Innovation</p>
-                    <p className="text-sm mt-2 text-muted-foreground">Exploring cutting-edge technologies and contributing to impactful projects</p>
+                    <h3 className="font-display font-semibold text-lg">Studying at Michigan</h3>
+                    <p className="text-muted-foreground text-sm">MS CSE · Graduating December 2026</p>
+                    <p className="text-sm mt-2 text-muted-foreground">
+                      Scalable systems, databases, NLP, and compilers — carrying a 3.74 GPA while looking for
+                      full-time software engineering roles.
+                    </p>
                   </div>
                 </div>
               </div>
